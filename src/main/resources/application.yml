@@ -6,6 +6,15 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
   thymeleaf:
     prefix: classpath:/templates/
+  mvc:
+    static-path-pattern=/static/**
+  devtools:
+    restart:
+      enabled: true #开启热部署
+      additional-paths: src/main/java #重启目录
+  freemarker:
+    cache: false #页面不加载缓存，修改即时生效
+
 mybatis:
   mapper-locations: classpath:mapping/*.xml
 server:
